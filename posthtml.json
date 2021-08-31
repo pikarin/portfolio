@@ -1,0 +1,10 @@
+{
+    "input": "src/html/index.html",
+    "output": "docs",
+    "plugins": {
+        "posthtml-modules": {
+            "root": "./src/html",
+            "initial": true
+        }
+    }
+  }
