@@ -667,6 +667,26 @@ video {
   bottom: -100%;
 }
 
+.\!bottom-0 {
+  bottom: 0px !important;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -695,12 +715,20 @@ video {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .max-w-\[968px\] {
@@ -810,6 +838,12 @@ video {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
