@@ -4,6 +4,7 @@
     "plugins": {
         "posthtml-modules": {
             "root": "./src/html",
+            "from": "./src/html/index.html",
             "initial": true
         }
     }
