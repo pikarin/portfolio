@@ -33,7 +33,7 @@ module.exports = {
         }
       },
       textColor: {
-        base: {
+        default: {
           DEFAULT: '#6D6A7C',
           inverted: '#BCBAC4',
         },
