@@ -35,7 +35,7 @@
         <NavMenu
           class="grid gap-8 grid-cols-3"
           :items="menuLinks"
-          @menuClicked="isOpen = false"
+          @menu:clicked="isOpen = false"
         />
 
         <button

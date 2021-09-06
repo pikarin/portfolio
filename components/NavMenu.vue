@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     menuClickedHandler(e) {
-      this.$emit("menu-clicked");
+      this.$emit("menu:clicked");
     },
   },
 };
