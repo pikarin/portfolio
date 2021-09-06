@@ -1,8 +1,8 @@
 <template>
   <section class="home pt-8 pb-16">
     <AppContainer class="grid gap-4">
-      <div class="grid grid-cols-[.5fr,3fr] pt-14 items-center">
-        <div class="grid grid-cols-[max-content] gap-y-4">
+      <div class="relative flex pt-14 items-center justify-center">
+        <div class="absolute left-0 grid grid-cols-[max-content] gap-y-4">
           <a
             v-for="social in socialLinks"
             :key="social.url"
@@ -17,7 +17,9 @@
         <div class="home__img">
           <HomeImg class="text-primary" />
         </div>
+      </div>
 
+      <div>
         <div class="mt-4 col-start-1 col-end-3">
           <h1 class="mb-1 text-3xl">Hi, I'm Aditia</h1>
           <h3 class="mb-3 font-medium text-default text-lg">Web developer</h3>
