@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+      scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+      @apply text-title font-semibold;
+  }
+}
+
+@layer components {
+  .button {
+      @apply bg-primary hover:bg-primary-dark text-white p-4 rounded-lg font-medium transition duration-300 ease-in-out;
+  }
+}
