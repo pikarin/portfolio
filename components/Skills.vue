@@ -46,7 +46,7 @@ export default {
         {
           title: "Backend developer",
           subtitle: "More than 5 years",
-          icon: "IconBracketsCurly",
+          icon: "IconServerConnection",
           list: [
             {
               name: "Laravel",
@@ -65,7 +65,7 @@ export default {
         {
           title: "Frontend developer",
           subtitle: "More than 4 years",
-          icon: "IconServerConnection",
+          icon: "IconBracketsCurly",
           list: [
             {
               name: "HTML",
