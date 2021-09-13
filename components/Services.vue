@@ -1,14 +1,26 @@
 <template>
-  <AppSection title="Services" subtitle="My technical level">
+  <AppSection title="Services" subtitle="What I offer">
     <AppContainer class="grid grid-cols-2 gap-5 mt-12">
       <div
         v-for="service in services"
         :key="service.title"
-        class="rounded shadow-md bg-white px-6 pb-5"
+        class="rounded shadow-md bg-white px-6 pb-5 pt-10"
       >
-        <span>icon-here</span>
-        <h3 class="text-xl font-bold">Backend Developer</h3>
-        <a href="#" @click.prevent.stop>View more</a>
+        <Component :is="service.icon" class="w-7 h-7 text-primary" />
+
+        <h3
+          class="mt-4 text-lg font-medium text-title"
+          v-text="service.title"
+        />
+
+        <a
+          href="#"
+          class="mt-4 inline-flex items-center text-primary"
+          @click.prevent.stop
+        >
+          <span class="text-sm font-medium">View more</span>
+          <IconArrowRight class="w-5 h-5" />
+        </a>
       </div>
     </AppContainer>
   </AppSection>
@@ -21,19 +33,19 @@ export default {
     return {
       services: [
         {
-          icon: "",
+          icon: "IconBracketsCurly",
           title: "Backend Developer",
-          link: "#",
+          link: "",
         },
         {
-          icon: "",
+          icon: "IconArrow",
           title: "Frontend Developer",
-          link: "#",
+          link: "",
         },
         {
-          icon: "",
+          icon: "IconServerConnection",
           title: "DevOps",
-          link: "#",
+          link: "",
         },
       ],
     };
