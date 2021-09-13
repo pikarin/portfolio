@@ -1,5 +1,5 @@
 <template>
-  <div id="portfolio">
+  <div id="portfolio" class="max-w-[968px] container mx-auto">
     <Header class="fixed w-full bottom-0 left-0 z-10 bg-body" />
 
     <main class="space-y-16">
@@ -15,11 +15,11 @@
 
       <Portfolio />
 
-      <Projects />
+      <Projects id="projects" />
 
       <Testimonial />
 
-      <Contact />
+      <Contact id="contact" />
     </main>
 
     <Footer />
