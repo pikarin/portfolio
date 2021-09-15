@@ -50,7 +50,7 @@ export default {
           list: [
             {
               name: "Laravel",
-              percentage: 90,
+              percentage: 95,
             },
             {
               name: "PHP",
@@ -86,6 +86,29 @@ export default {
             {
               name: "React",
               percentage: 60,
+            },
+          ],
+        },
+        {
+          title: "DevOps",
+          subtitle: "1 year experience",
+          icon: "IconServerConnection",
+          list: [
+            {
+              name: "Git",
+              percentage: 70,
+            },
+            {
+              name: "Docker",
+              percentage: 60,
+            },
+            {
+              name: "Jenkins",
+              percentage: 60,
+            },
+            {
+              name: "AWS",
+              percentage: 50,
             },
           ],
         },
