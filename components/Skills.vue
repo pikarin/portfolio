@@ -1,6 +1,6 @@
 <template>
   <AppSection title="Skills" subtitle="My technical level">
-    <AppContainer class="skills__container grid mt-12">
+    <AppContainer class="grid mt-12">
       <div class="space-y-12">
         <div
           v-for="(skill, index) in skills"
