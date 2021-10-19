@@ -6,7 +6,7 @@
         flex
         items-center
         justify-between
-        max-w-[968px]
+        max-w-[480px]
         h-12
         text-title
         font-medium

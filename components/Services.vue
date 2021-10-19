@@ -18,8 +18,8 @@
           class="mt-4 inline-flex items-center text-primary"
           @click.prevent.stop
         >
-          <span class="text-sm font-medium">View more</span>
-          <IconArrowRight class="w-5 h-5" />
+          <!-- <span class="text-sm font-medium">View more</span>
+          <IconArrowRight class="w-5 h-5" /> -->
         </a>
       </div>
     </AppContainer>

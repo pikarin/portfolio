@@ -20,7 +20,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     bodyAttrs: {
-      'class': 'font-poppins antialiased mb-12 bg-body text-default'
+      'class': 'font-poppins antialiased mb-12 bg-body text-default lg:bg-gray-100'
     }
   },
 
