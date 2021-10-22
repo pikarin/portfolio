@@ -66,7 +66,16 @@ export default {
     return {
       portfolios: [
         {
-          image: "porto-stokmedia.png",
+          image: "porto-snapinn.jpg",
+          title: "Snapinn",
+          description: `
+            Responsive brokerage (Agent Property) web application. <br />
+            Build with Laravel, Tailwind CSS and Alpine.js.
+          `,
+          // url: "https://www.snapinn.com",
+        },
+        {
+          image: "porto-stokmedia.jpeg",
           title: "Stokmedia",
           description: `
             Responsive website for selling photos. <br />
@@ -81,13 +90,13 @@ export default {
           url: "https://bisnisdanham.id",
         },
         {
-          image: "porto-evaluasikla.png",
+          image: "porto-evaluasikla.jpeg",
           title: "Evaluasi KLA",
           description: `Survey website for evaluate the feasibility of the city in Indonesia for childrens. Build with Laravel`,
           url: "https://evaluasikla.id",
         },
         {
-          image: "porto-holahalo.png",
+          image: "porto-holahalo.jpeg",
           title: "HolaHalo Indonesia Travel Marketplace",
           description: `E-commerce website for Traveling. Build with Laravel, Bootstrap 4 and Vue.js`,
           url: false,
