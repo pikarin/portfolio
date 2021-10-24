@@ -21,7 +21,7 @@ export default {
       { name: 'description', content: 'CV Aditia Firmansyah Laravel Developer' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ],
     bodyAttrs: {
       'class': 'font-poppins antialiased mb-12 bg-body text-default lg:bg-gray-100'

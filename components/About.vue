@@ -24,7 +24,7 @@
         </div>
 
         <div class="about__buttons flex justify-center">
-          <a download="" href="#" class="button inline-flex items-center">
+          <a download="" href="RESUME-ADITIA-DEVELOPER.pdf" class="button inline-flex items-center">
             <span>Download CV</span>
             <IconDownload class="ml-2 w-5 h-5" />
           </a>
