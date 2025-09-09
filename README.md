@@ -1,35 +1,40 @@
-# portfolio-vue
+# M. Aditia Firmansyah — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+A beautiful personal portfolio built with Vue 3, Vite, and Tailwind CSS.
 
-## Recommended IDE Setup
+## Tech
+- Vue 3 + Vite
+- Tailwind CSS v4 (@tailwindcss/vite)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Getting Started
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Build for production:
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Preview production build:
 
 ```sh
-npm run lint
+npm run preview
 ```
+
+## Customize Content
+The main content lives in `src/App.vue` as simple arrays you can edit:
+- `experiences`: list of roles with company, period, location, and bullet points.
+- `projects`: title, description, tags, and external link.
+
+You can also update:
+- Page title and SEO tags in `index.html`.
+- Contact links in the Contact section within `src/App.vue`.
+
+## Notes
+- Tailwind v4 is already configured through the Vite plugin. Global styles are imported from `src/assets/main.css`.
+- The design supports dark mode automatically based on the OS preference.
+- Language switcher: visit `/en` (default) or `/id`. If you open `/`, it redirects to `/en`. Use the EN/ID buttons in the navbar to switch languages — it updates the URL path via the History API (no full page refresh) and preserves your current scroll position. Refreshing the page keeps the selected language.
