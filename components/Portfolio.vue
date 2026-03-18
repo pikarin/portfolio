@@ -1,17 +1,19 @@
 <template>
   <AppSection title="Portfolio" subtitle="Most recent work">
     <AppContainer class="mt-12">
-      <div
-        id="swiper"
-        v-swiper="swiperOption"
-        class="relative -mx-4"
-        :loadtheme="false"
-      >
-        <div class="swiper-wrapper">
-          <div
+      <div id="swiper" class="relative -mx-4">
+        <Swiper
+          :modules="[Navigation, Pagination]"
+          :slides-per-view="1"
+          :space-between="40"
+          :loop="true"
+          :pagination="{ clickable: true }"
+          :navigation="true"
+        >
+          <SwiperSlide
             v-for="(portfolio, i) in portfolios"
             :key="portfolio.title"
-            class="swiper-slide px-10 pb-10"
+            class="px-10 pb-10"
             :class="`slide--${i}`"
           >
             <div
@@ -43,24 +45,20 @@
                 <IconArrowRight class="ml-1 w-5 h-5" />
               </AppButton>
             </div>
-          </div>
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </AppContainer>
   </AppSection>
 </template>
 
 <script>
-import { directive } from "vue-awesome-swiper";
+import { Navigation, Pagination } from 'swiper/modules'
 
 export default {
   name: "Portfolio",
-  directives: {
-    swiper: directive,
+  setup() {
+    return { Navigation, Pagination }
   },
   data() {
     return {
@@ -102,19 +100,6 @@ export default {
           url: false,
         },
       ],
-      swiperOption: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      },
     };
   },
 };
