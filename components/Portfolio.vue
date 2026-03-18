@@ -25,7 +25,7 @@
             >
               <img
                 class="w-full h-full object-center object-cover"
-                :src="require(`~/assets/img/${portfolio.image}`)"
+                :src="`/img/${portfolio.image}`"
                 :alt="portfolio.name"
               />
             </div>

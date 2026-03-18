@@ -25,7 +25,7 @@
         class="w-[170px]"
         x="12"
         y="-20"
-        xlink:href="~assets/img/aditia.png"
+        xlink:href="/img/aditia.png"
       />
     </g>
   </svg>
