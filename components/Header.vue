@@ -56,9 +56,7 @@
 </template>
 
 <script>
-import IconSuitCase from "./IconSuitCase.vue";
 export default {
-  components: { IconSuitCase },
   name: "Header",
   data() {
     return {
