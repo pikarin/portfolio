@@ -1,13 +1,12 @@
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './components/**/*.{vue,js}',
-     './layouts/**/*.vue',
-     './pages/**/*.vue',
-     './plugins/**/*.{js,ts}',
-     './nuxt.config.{js,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -55,9 +54,6 @@ module.exports = {
         top: '0 -1px 4px rgba(0,0,0,.15)'
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
