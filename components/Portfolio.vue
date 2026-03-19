@@ -2,15 +2,14 @@
   <AppSection title="Portfolio" subtitle="Most recent work">
     <AppContainer class="mt-12">
       <div id="swiper" class="relative -mx-4">
-        <Swiper
-          :modules="[Navigation, Pagination]"
-          :slides-per-view="1"
-          :space-between="40"
-          :loop="true"
-          :pagination="{ clickable: true }"
-          :navigation="true"
+        <swiper-container
+          slides-per-view="1"
+          space-between="40"
+          loop="true"
+          navigation="true"
+          pagination-clickable="true"
         >
-          <SwiperSlide
+          <swiper-slide
             v-for="(portfolio, i) in portfolios"
             :key="portfolio.title"
             class="px-10 pb-10"
@@ -45,21 +44,16 @@
                 <IconArrowRight class="ml-1 w-5 h-5" />
               </AppButton>
             </div>
-          </SwiperSlide>
-        </Swiper>
+          </swiper-slide>
+        </swiper-container>
       </div>
     </AppContainer>
   </AppSection>
 </template>
 
 <script>
-import { Navigation, Pagination } from 'swiper/modules'
-
 export default {
   name: "Portfolio",
-  setup() {
-    return { Navigation, Pagination }
-  },
   data() {
     return {
       portfolios: [
@@ -107,7 +101,16 @@ export default {
 
 <style scoped>
 #swiper {
+  container-type: inline-size;
+}
+</style>
+
+<!-- unscoped so variables pierce shadow DOM -->
+<style>
+#swiper {
   --swiper-navigation-size: 24px;
+  --swiper-navigation-top-offset: calc((100cqw - 5rem) * 9 / 32);
   --swiper-theme-color: #6c55e0;
+  --swiper-navigation-color: #6c55e0;
 }
 </style>
