@@ -15,7 +15,7 @@
     "@tailwindcss/aspect-ratio": "^0.4",
     "autoprefixer": "^10",
     "gh-pages": "^3.2.3",
-    "nuxt": "^3",
+    "nuxt": "^4",
     "nuxt-swiper": "^2",
     "postcss": "^8",
     "tailwindcss": "^3"

@@ -33,5 +33,5 @@ export default defineNuxtConfig({
     families: { Poppins: true },
   },
 
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-03-19',
 })
