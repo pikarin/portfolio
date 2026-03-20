@@ -27,6 +27,10 @@ export default defineNuxtConfig({
     'nuxt-swiper',
   ],
 
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+  },
+
   googleFonts: {
     download: true,
     display: 'swap',
