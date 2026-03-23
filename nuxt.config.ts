@@ -37,5 +37,11 @@ export default defineNuxtConfig({
     families: { Poppins: true },
   },
 
+  vite: {
+    build: {
+      modulePreload: { polyfill: false },
+    },
+  },
+
   compatibilityDate: '2025-03-19',
 })
