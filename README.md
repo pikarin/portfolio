@@ -1,69 +1,68 @@
-# portfolio
+# Muhammad Aditia Firmansyah — Portfolio
 
-## Build Setup
+Personal portfolio site with 5+ years of experience across 20+ projects and 5+ companies. Built with Nuxt 4 and Tailwind CSS, deployed to GitHub Pages.
 
-```bash
-# install dependencies
-$ npm install
+**Live:** [pikarin.github.io/portfolio](https://pikarin.github.io/portfolio)
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## What's Inside
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+- Hero section with GitHub and LinkedIn links
+- About section with downloadable CV/resume
+- Skills breakdown — Backend (Laravel, PHP, Node.js), Frontend (HTML, CSS, JavaScript, Vue, React), DevOps (Git, Docker, Jenkins, AWS)
+- Services: Backend Development, Frontend Development, DevOps
+- Portfolio carousel featuring projects like Stokmedia, IGCN Help Desk, Evaluasi KLA, and more
+- Contact section
 
-# generate static project
-$ npm run generate
+## Tech Stack
+
+- [Nuxt 4](https://nuxt.com) — static SPA (`ssr: false`)
+- [Tailwind CSS v3](https://tailwindcss.com) — utility-first styling with custom theme
+- [Nuxt Swiper](https://nuxt.com/modules/swiper) — carousel/slider components
+- [Google Fonts](https://nuxt.com/modules/google-fonts) — Poppins (downloaded at build time)
+
+## Project Structure
+
+```
+app/
+  app.vue            # root component
+  pages/             # file-based routing
+  components/        # auto-imported Vue components
+  assets/
+    css/             # Tailwind & font stylesheets
+    fonts/           # local font files
+    img/             # images
+public/              # static files (favicon, resume PDF)
+nuxt.config.ts       # Nuxt configuration
+tailwind.config.js   # Tailwind theme & plugins
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Setup
 
-## Special Directories
+```bash
+npm install
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## Development
 
-### `assets`
+```bash
+npm run dev          # start dev server at localhost:3000
+```
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## Build & Deploy
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```bash
+npm run generate     # generate static site to .output/public/
+npm run deploy       # publish .output/public/ to gh-pages branch
+```
 
-### `components`
+The site is deployed to GitHub Pages under the `/portfolio` base path.
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## Scripts
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run generate` | Generate static site |
+| `npm run preview` | Preview production build locally |
+| `npm run deploy` | Deploy to GitHub Pages |
