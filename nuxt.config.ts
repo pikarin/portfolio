@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   ssr: false,
 
@@ -19,17 +21,12 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/fonts.css'],
+  css: ['~/assets/css/fonts.css', '~/assets/css/tailwind.css'],
 
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
     'nuxt-swiper',
   ],
-
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-  },
 
   googleFonts: {
     download: true,
@@ -38,6 +35,7 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    plugins: [tailwindcss()],
     build: {
       modulePreload: { polyfill: false },
     },

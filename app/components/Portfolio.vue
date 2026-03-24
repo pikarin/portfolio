@@ -17,7 +17,7 @@
           >
             <div
               class="
-                aspect-w-16 aspect-h-9
+                aspect-video
                 rounded-lg
                 overflow-hidden
                 shadow-lg
