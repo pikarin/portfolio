@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-poppins: 'Poppins', sans-serif;
 
@@ -8,15 +10,39 @@
   --color-primary-dark: #5943CB;
 
   --color-body: #FBFBFE;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-alt: #F3F4F6;
 
   --color-default: #6D6A7C;
   --color-light: #A19FAD;
   --color-title: #242329;
 
+  --color-border: #E5E7EB;
+
   --shadow-top: 0 -1px 4px rgba(0,0,0,.15);
 }
 
 @layer base {
+  .dark {
+    --color-primary-lighter: #3D3560;
+    --color-primary: #8471E8;
+    --color-primary-dark: #6C55E0;
+
+    --color-body: #141122;
+    --color-surface: #1E1B2E;
+    --color-surface-elevated: #2A2740;
+    --color-surface-alt: #181528;
+
+    --color-default: #B5B1C6;
+    --color-light: #807C94;
+    --color-title: #EDEAF5;
+
+    --color-border: #352F50;
+
+    --shadow-top: 0 -1px 4px rgba(0,0,0,.4);
+  }
+
   html {
     scroll-behavior: smooth;
   }

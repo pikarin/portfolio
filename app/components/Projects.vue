@@ -13,9 +13,9 @@
           as="a"
           href="#contact"
           class="
-            !bg-white
+            !bg-surface
             !text-primary
-            hover:!bg-white
+            hover:!bg-surface
             inline-flex
             items-center
           "
