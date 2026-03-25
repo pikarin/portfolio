@@ -26,7 +26,7 @@
             >
               <img
                 class="w-full h-full object-center object-cover"
-                :src="`/img/${portfolio.image}`"
+                :src="`${baseURL}/img/${portfolio.image}`"
                 :alt="portfolio.name"
               />
             </div>
@@ -50,6 +50,10 @@
     </AppContainer>
   </AppSection>
 </template>
+
+<script setup>
+const baseURL = useRuntimeConfig().app.baseURL
+</script>
 
 <script>
 export default {

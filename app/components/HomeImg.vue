@@ -25,11 +25,15 @@
         class="w-[170px]"
         x="12"
         y="-20"
-        xlink:href="/img/aditia.png"
+        :xlink:href="`${baseURL}/img/aditia.png`"
       />
     </g>
   </svg>
 </template>
+
+<script setup>
+const baseURL = useRuntimeConfig().app.baseURL
+</script>
 
 <script>
 export default {
