@@ -57,7 +57,7 @@ export default {
   transition-duration: 0.5s;
 }
 
-.expand-enter {
+.expand-enter-from {
   max-height: 0px;
 }
 
@@ -65,7 +65,7 @@ export default {
   max-height: 24rem;
 }
 
-.expand-leave {
+.expand-leave-from {
   max-height: 24rem;
 }
 

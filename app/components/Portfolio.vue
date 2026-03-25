@@ -1,22 +1,23 @@
 <template>
   <AppSection title="Portfolio" subtitle="Most recent work">
     <AppContainer class="mt-12">
-      <div
-        id="swiper"
-        v-swiper="swiperOption"
-        class="relative -mx-4"
-        :loadtheme="false"
-      >
-        <div class="swiper-wrapper">
-          <div
+      <div id="swiper" class="relative -mx-4">
+        <swiper-container
+          slides-per-view="1"
+          space-between="40"
+          loop="true"
+          navigation="true"
+          pagination-clickable="true"
+        >
+          <swiper-slide
             v-for="(portfolio, i) in portfolios"
             :key="portfolio.title"
-            class="swiper-slide px-10 pb-10"
+            class="px-10 pb-10"
             :class="`slide--${i}`"
           >
             <div
               class="
-                aspect-w-16 aspect-h-9
+                aspect-video
                 rounded-lg
                 overflow-hidden
                 shadow-lg
@@ -25,7 +26,7 @@
             >
               <img
                 class="w-full h-full object-center object-cover"
-                :src="require(`~/assets/img/${portfolio.image}`)"
+                :src="`/img/${portfolio.image}`"
                 :alt="portfolio.name"
               />
             </div>
@@ -43,25 +44,16 @@
                 <IconArrowRight class="ml-1 w-5 h-5" />
               </AppButton>
             </div>
-          </div>
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+          </swiper-slide>
+        </swiper-container>
       </div>
     </AppContainer>
   </AppSection>
 </template>
 
 <script>
-import { directive } from "vue-awesome-swiper";
-
 export default {
   name: "Portfolio",
-  directives: {
-    swiper: directive,
-  },
   data() {
     return {
       portfolios: [
@@ -102,19 +94,6 @@ export default {
           url: false,
         },
       ],
-      swiperOption: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      },
     };
   },
 };
@@ -122,7 +101,16 @@ export default {
 
 <style scoped>
 #swiper {
+  container-type: inline-size;
+}
+</style>
+
+<!-- unscoped so variables pierce shadow DOM -->
+<style>
+#swiper {
   --swiper-navigation-size: 24px;
+  --swiper-navigation-top-offset: calc((100cqw - 5rem) * 9 / 32);
   --swiper-theme-color: #6c55e0;
+  --swiper-navigation-color: #6c55e0;
 }
 </style>
