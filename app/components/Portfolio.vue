@@ -21,7 +21,7 @@
                 rounded-lg
                 overflow-hidden
                 shadow-lg
-                border border-gray-200
+                border border-border
               "
             >
               <img
@@ -114,7 +114,7 @@ export default {
 #swiper {
   --swiper-navigation-size: 24px;
   --swiper-navigation-top-offset: calc((100cqw - 5rem) * 9 / 32);
-  --swiper-theme-color: #6c55e0;
-  --swiper-navigation-color: #6c55e0;
+  --swiper-theme-color: var(--color-primary);
+  --swiper-navigation-color: var(--color-primary);
 }
 </style>

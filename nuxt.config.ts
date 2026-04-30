@@ -7,7 +7,12 @@ export default defineNuxtConfig({
     baseURL: '/portfolio',
     head: {
       title: 'M. Aditia Firmansyah',
-      htmlAttrs: { lang: 'en' },
+      htmlAttrs: { lang: 'en', class: 'dark' },
+      script: [
+        {
+          innerHTML: `(function(){try{var m=localStorage.getItem('portfolio-color-mode');if(m==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}})();`,
+        },
+      ],
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

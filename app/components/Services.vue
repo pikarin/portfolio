@@ -4,7 +4,7 @@
       <div
         v-for="service in services"
         :key="service.title"
-        class="rounded shadow-md bg-white px-6 pb-5 pt-10"
+        class="rounded shadow-md bg-surface-elevated px-6 pb-5 pt-10"
       >
         <Component :is="service.icon" class="w-7 h-7 text-primary" />
 

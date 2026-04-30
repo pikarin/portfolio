@@ -1,7 +1,7 @@
 <template>
   <div
     id="portfolio"
-    class="max-w-[480px] lg:bg-white lg:rounded-xl lg:shadow container mx-auto"
+    class="max-w-[480px] lg:bg-surface lg:rounded-xl lg:shadow container mx-auto"
   >
     <Header class="fixed w-full bottom-0 left-0 z-10 bg-body" />
 
