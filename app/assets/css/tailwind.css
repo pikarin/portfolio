@@ -1,33 +1,97 @@
 @import "tailwindcss";
 
+/*
+  Design tokens. One palette, one accent (brand violet), light + dark
+  resolved with light-dark() so every utility works in both modes.
+  Shape lock: rounded-lg (8px) on every button, image, chip and card.
+*/
 @theme {
   --font-poppins: 'Poppins', sans-serif;
 
-  --color-primary-lighter: #C1B5FC;
+  --color-primary-lighter: light-dark(#C1B5FC, #3A2F7A);
   --color-primary: #6C55E0;
   --color-primary-dark: #5943CB;
+  /* accent used as text/icon colour: lifted in dark mode for contrast */
+  --color-accent: light-dark(#6C55E0, #A093F2);
 
-  --color-body: #FBFBFE;
+  --color-body: light-dark(#FBFBFE, #131218);
+  --color-surface: light-dark(#F3F2F9, #1B1A22);
+  --color-line: light-dark(#E6E4EF, #2A2833);
 
-  --color-default: #6D6A7C;
-  --color-light: #A19FAD;
-  --color-title: #242329;
+  --color-default: light-dark(#5F5C6E, #B4B1C2);
+  --color-light: light-dark(#8B889A, #7E7B8C);
+  --color-title: light-dark(#242329, #F4F3F8);
 
-  --shadow-top: 0 -1px 4px rgba(0,0,0,.15);
+  --shadow-top: 0 -1px 4px rgba(20, 16, 48, .12);
+  --shadow-soft: 0 12px 32px -12px rgba(36, 35, 41, .18);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
   html {
+    color-scheme: light dark;
     scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4 {
     @apply text-title font-semibold;
   }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
 }
 
 @layer components {
   .button {
-    @apply bg-primary hover:bg-primary-dark text-white p-4 rounded-lg font-medium transition duration-300 ease-in-out;
+    @apply inline-flex items-center gap-2 bg-primary hover:bg-primary-dark active:scale-[0.98] text-white px-5 py-3 rounded-lg font-medium transition duration-300 ease-in-out;
+  }
+
+  .button--inverse {
+    @apply bg-white text-primary-dark hover:bg-white/90;
+  }
+
+  .section-title {
+    @apply text-2xl lg:text-3xl font-semibold text-title tracking-tight;
+  }
+
+  .link-inline {
+    @apply inline-flex items-center gap-1 font-medium text-accent hover:text-primary-dark transition-colors;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-lg border border-line bg-surface px-3 py-1.5 text-sm text-title;
+  }
+}
+
+/* Motion: scroll reveal + hero entry. Static unless motion is allowed. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    translate: 0 20px;
+    transition: opacity 0.7s var(--ease-out-expo), translate 0.7s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .enter {
+    animation: enter 0.8s var(--ease-out-expo) both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+      translate: 0 16px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
   }
 }

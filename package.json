@@ -12,10 +12,10 @@
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3",
     "gh-pages": "^3.2.3",
-    "nuxt": "^4",
-    "nuxt-swiper": "^2"
+    "nuxt": "^4"
   },
   "dependencies": {
+    "@phosphor-icons/vue": "^2.2.1",
     "@tailwindcss/vite": "^4.2.2",
     "tailwindcss": "^4.2.2"
   }

@@ -1,54 +1,38 @@
 <template>
-  <AppSection title="Services" subtitle="What I offer">
-    <AppContainer class="grid grid-cols-2 gap-5 mt-12">
+  <AppSection title="Services">
+    <div class="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-3 lg:gap-0 lg:divide-x lg:divide-line">
       <div
-        v-for="service in services"
+        v-for="(service, i) in services"
         :key="service.title"
-        class="rounded shadow-md bg-white px-6 pb-5 pt-10"
+        v-reveal="i * 80"
+        class="lg:px-8 lg:first:pl-0 lg:last:pr-0"
       >
-        <Component :is="service.icon" class="w-7 h-7 text-primary" />
-
-        <h3
-          class="mt-4 text-lg font-medium text-title"
-          v-text="service.title"
-        />
-
-        <a
-          href="#"
-          class="mt-4 inline-flex items-center text-primary"
-          @click.prevent.stop
-        >
-          <!-- <span class="text-sm font-medium">View more</span>
-          <IconArrowRight class="w-5 h-5" /> -->
-        </a>
+        <Component :is="service.icon" :size="32" class="text-accent" />
+        <h3 class="mt-5 text-lg font-medium" v-text="service.title" />
+        <p class="mt-2 max-w-[36ch] leading-relaxed" v-text="service.description" />
       </div>
-    </AppContainer>
+    </div>
   </AppSection>
 </template>
 
-<script>
-export default {
-  name: "Services",
-  data() {
-    return {
-      services: [
-        {
-          icon: "IconBracketsCurly",
-          title: "Backend Developer",
-          link: "",
-        },
-        {
-          icon: "IconArrow",
-          title: "Frontend Developer",
-          link: "",
-        },
-        {
-          icon: "IconServerConnection",
-          title: "DevOps",
-          link: "",
-        },
-      ],
-    };
+<script setup>
+import { PhBracketsCurly, PhBrowser, PhHardDrives } from '@phosphor-icons/vue'
+
+const services = [
+  {
+    icon: PhBracketsCurly,
+    title: 'Backend Development',
+    description: 'Laravel applications and APIs: data models, auth, queues, payments and third-party integrations.',
   },
-};
+  {
+    icon: PhBrowser,
+    title: 'Frontend Development',
+    description: 'Responsive interfaces in Vue or React with Tailwind CSS, wired to the backend they run on.',
+  },
+  {
+    icon: PhHardDrives,
+    title: 'DevOps',
+    description: 'Docker setups, Jenkins pipelines and AWS deployments so releases are repeatable.',
+  },
+]
 </script>

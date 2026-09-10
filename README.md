@@ -8,16 +8,16 @@ Personal portfolio site with 5+ years of experience across 20+ projects and 5+ c
 
 - Hero section with GitHub and LinkedIn links
 - About section with downloadable CV/resume
-- Skills breakdown — Backend (Laravel, PHP, Node.js), Frontend (HTML, CSS, JavaScript, Vue, React), DevOps (Git, Docker, Jenkins, AWS)
+- Skills grouped by area — Backend (Laravel, PHP, Node.js), Frontend (HTML, CSS, Tailwind, JavaScript, Vue, React, Alpine.js), DevOps (Git, Docker, Jenkins, AWS)
 - Services: Backend Development, Frontend Development, DevOps
-- Portfolio carousel featuring projects like Stokmedia, IGCN Help Desk, Evaluasi KLA, and more
+- Portfolio grid featuring projects like Stokmedia, IGCN Help Desk, Evaluasi KLA, and more
 - Contact section
 
 ## Tech Stack
 
 - [Nuxt 4](https://nuxt.com) — static SPA (`ssr: false`)
-- [Tailwind CSS v3](https://tailwindcss.com) — utility-first styling with custom theme
-- [Nuxt Swiper](https://nuxt.com/modules/swiper) — carousel/slider components
+- [Tailwind CSS v4](https://tailwindcss.com) — utility-first styling, light/dark tokens via `light-dark()`
+- [Phosphor Icons](https://phosphoricons.com) — single icon family via `@phosphor-icons/vue`
 - [Google Fonts](https://nuxt.com/modules/google-fonts) — Poppins (downloaded at build time)
 
 ## Project Structure
@@ -33,7 +33,6 @@ app/
     img/             # images
 public/              # static files (favicon, resume PDF)
 nuxt.config.ts       # Nuxt configuration
-tailwind.config.js   # Tailwind theme & plugins
 ```
 
 ## Setup

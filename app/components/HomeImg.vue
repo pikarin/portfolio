@@ -1,6 +1,8 @@
 <template>
   <svg
-    class="w-[200px] fill-current"
+    class="h-auto fill-current"
+    role="img"
+    aria-label="Portrait of Aditia Firmansyah"
     viewBox="0 0 200 187"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
