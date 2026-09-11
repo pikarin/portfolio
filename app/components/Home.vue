@@ -1,62 +1,63 @@
 <template>
-  <section class="home pt-8 pb-16">
-    <AppContainer class="grid gap-4">
-      <div class="relative flex pt-14 items-center justify-center">
-        <div class="absolute left-0 grid grid-cols-[max-content] gap-y-4">
-          <a
-            v-for="social in socialLinks"
-            :key="social.url"
-            :href="social.url"
-            target="_blank"
-            class="text-xl text-primary hover:text-primary-dark"
-          >
-            <Component :is="social.icon" class="inline-block w-6 h-6" />
-          </a>
-        </div>
+  <section class="overflow-x-clip pt-10 lg:pt-24">
+    <AppContainer class="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
+      <div class="order-2 lg:order-1 lg:col-span-7">
+        <h1 class="enter text-4xl font-semibold tracking-tight text-title lg:text-6xl lg:leading-none">
+          Hi, I'm Aditia
+        </h1>
+        <p class="enter mt-3 text-lg font-medium text-accent" style="--enter-delay: 80ms">
+          Web developer
+        </p>
+        <p class="enter mt-5 max-w-[48ch] leading-relaxed" style="--enter-delay: 160ms">
+          Laravel and Vue developer with 5+ years shipping web apps for startups, NGOs and public-sector teams in Indonesia.
+        </p>
 
-        <div class="home__img">
-          <HomeImg class="text-primary" />
+        <div class="enter mt-8 flex flex-wrap items-center gap-6" style="--enter-delay: 240ms">
+          <AppButton el="a" href="#contact">
+            <span>Contact Me</span>
+            <PhChatCircle :size="20" />
+          </AppButton>
+
+          <div class="flex items-center gap-4">
+            <a
+              v-for="social in socialLinks"
+              :key="social.url"
+              :href="social.url"
+              target="_blank"
+              rel="noopener"
+              :aria-label="social.label"
+              class="text-accent hover:text-primary-dark transition-colors"
+            >
+              <Component :is="social.icon" :size="24" />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div class="mt-4 col-start-1 col-end-3">
-          <h1 class="mb-1 text-3xl">Hi, I'm Aditia</h1>
-          <h3 class="mb-3 font-medium text-default text-lg">Web developer</h3>
-          <p class="mb-8">
-            High level experience in web design and development knowledge,
-            producing quality work.
-          </p>
-          <AppButton el="a" href="#contact" class="inline-flex items-center">
-            <span>Contact Me</span>
-            <IconMessage class="ml-2 w-5 h-5 transition-all duration-300" />
-          </AppButton>
-        </div>
-
-        <div class="hidden col-span-2">
-          <ButtonScrollDown />
+      <div class="order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
+        <div class="relative isolate">
+          <!-- Ambient glow: brand violet radial, sits behind the portrait, fades in on load -->
+          <div
+            aria-hidden="true"
+            class="
+              enter-glow pointer-events-none absolute left-[64%] top-[34%] -z-10 size-[140%]
+              -translate-x-1/2 -translate-y-1/2 rounded-full
+              bg-radial from-primary/25 via-primary/8 via-45% to-transparent to-70%
+              dark:from-primary/35 dark:via-primary/10
+            "
+          />
+          <HomeImg class="enter w-[220px] text-primary lg:w-[340px]" style="--enter-delay: 120ms" />
         </div>
       </div>
     </AppContainer>
   </section>
 </template>
 
-<script>
-export default {
-  name: "Home",
-  data() {
-    return {
-      socialLinks: [
-        {
-          url: "https://github.com/pikarin",
-          icon: "IconGithub",
-        },
-        {
-          url: "https://www.linkedin.com/in/aditiafirmansyah",
-          icon: "IconLinkedin",
-        },
-      ],
-    };
-  },
-};
+<script setup>
+import { PhChatCircle, PhGithubLogo, PhLinkedinLogo } from '@phosphor-icons/vue'
+
+const socialLinks = [
+  { url: 'https://github.com/pikarin', icon: PhGithubLogo, label: 'GitHub' },
+  { url: 'https://www.linkedin.com/in/aditiafirmansyah', icon: PhLinkedinLogo, label: 'LinkedIn' },
+]
 </script>

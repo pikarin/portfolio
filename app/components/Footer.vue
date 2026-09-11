@@ -1,38 +1,40 @@
 <template>
-  <footer class="pt-8">
-    <div class="bg-primary pt-8 pb-12 text-white">
-      <AppContainer class="space-y-14">
-        <div>
-          <h1 class="text-white text-2xl font-semibold">Aditia</h1>
-          <h3 class="text-white text-sm font-normal mt-1">Web developer</h3>
-        </div>
+  <footer class="mt-24 border-t border-line lg:mt-32">
+    <AppContainer class="grid gap-10 py-12 lg:grid-cols-12 lg:items-start">
+      <div class="lg:col-span-5">
+        <p class="text-xl font-semibold text-title">Aditia</p>
+        <p class="mt-1 text-sm">Web developer</p>
+      </div>
 
-        <nav class="flex flex-col gap-y-4">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#services">Services</a>
-        </nav>
+      <nav class="flex gap-6 text-sm font-medium lg:col-span-4" aria-label="Footer">
+        <a href="#about" class="text-default hover:text-accent transition-colors">About</a>
+        <a href="#skills" class="text-default hover:text-accent transition-colors">Skills</a>
+        <a href="#services" class="text-default hover:text-accent transition-colors">Services</a>
+        <a href="#portfolio" class="text-default hover:text-accent transition-colors">Portfolio</a>
+      </nav>
 
-        <div class="flex gap-x-8">
-          <a href="https://www.facebook.com/aditia.pikarin" target="_blank">
-            <IconFacebook class="w-6 h-6" />
-          </a>
-          <a href="https://twitter.com/AditiaPikarin" target="_blank">
-            <IconTwitter class="w-6 h-6" />
-          </a>
-        </div>
+      <div class="flex gap-5 lg:col-span-3 lg:justify-end">
+        <a href="https://github.com/pikarin" target="_blank" rel="noopener" aria-label="GitHub" class="text-default hover:text-accent transition-colors">
+          <PhGithubLogo :size="24" />
+        </a>
+        <a href="https://www.linkedin.com/in/aditiafirmansyah" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-default hover:text-accent transition-colors">
+          <PhLinkedinLogo :size="24" />
+        </a>
+        <a href="https://www.facebook.com/aditia.pikarin" target="_blank" rel="noopener" aria-label="Facebook" class="text-default hover:text-accent transition-colors">
+          <PhFacebookLogo :size="24" />
+        </a>
+        <a href="https://twitter.com/AditiaPikarin" target="_blank" rel="noopener" aria-label="Twitter" class="text-default hover:text-accent transition-colors">
+          <PhTwitterLogo :size="24" />
+        </a>
+      </div>
 
-        <div class="flex items-center justify-center text-light">
-          <span>&copy;</span>
-          <span class="ml-1 text-xs">Muhammad Aditia Firmansyah</span>
-        </div>
-      </AppContainer>
-    </div>
+      <p class="text-xs text-light lg:col-span-12">&copy; {{ year }} Muhammad Aditia Firmansyah</p>
+    </AppContainer>
   </footer>
 </template>
 
-<script>
-export default {
-  name: "Footer",
-};
+<script setup>
+import { PhGithubLogo, PhLinkedinLogo, PhFacebookLogo, PhTwitterLogo } from '@phosphor-icons/vue'
+
+const year = new Date().getFullYear()
 </script>

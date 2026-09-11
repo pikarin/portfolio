@@ -1,36 +1,17 @@
 <template>
-  <div
-    id="portfolio"
-    class="max-w-[480px] lg:bg-surface lg:rounded-xl lg:shadow container mx-auto"
-  >
-    <Header class="fixed w-full bottom-0 left-0 z-10 bg-body" />
+  <div class="pb-16 lg:pb-0">
+    <Header />
 
-    <main class="space-y-16">
+    <main class="space-y-24 lg:space-y-32">
       <Home id="home" />
-
       <About id="about" />
-
       <Skills id="skills" />
-
-      <Qualification />
-
       <Services id="services" />
-
       <Portfolio id="portfolio" />
-
       <Projects id="projects" />
-
-      <Testimonial />
-
       <Contact id="contact" />
     </main>
 
     <Footer />
   </div>
 </template>
-
-<script>
-export default {
-  //
-};
-</script>
