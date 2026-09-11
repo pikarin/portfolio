@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /*
   Design tokens. One palette, one accent (brand violet), light + dark
   resolved with light-dark() so every utility works in both modes.
+  Mode is driven by `color-scheme` on <html>: the `.dark` class (toggled by
+  useColorMode) forces dark, otherwise light.
   Shape lock: rounded-lg (8px) on every button, image, chip and card.
 */
 @theme {
@@ -30,8 +34,12 @@
 
 @layer base {
   html {
-    color-scheme: light dark;
+    color-scheme: light;
     scroll-behavior: smooth;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   h1, h2, h3, h4 {

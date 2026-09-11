@@ -14,17 +14,29 @@
         </li>
       </ul>
 
-      <a href="#contact" class="button hidden py-2 text-sm lg:inline-flex">Contact Me</a>
+      <div class="flex items-center gap-3 lg:gap-4">
+        <button
+          class="text-title hover:text-accent transition-colors"
+          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :aria-pressed="isDark"
+          @click="toggleColorMode"
+        >
+          <PhSun v-if="isDark" :size="22" />
+          <PhMoon v-else :size="22" />
+        </button>
 
-      <button
-        class="text-title hover:text-accent lg:hidden"
-        aria-label="Open menu"
-        :aria-expanded="isOpen"
-        aria-controls="nav-menu"
-        @click="isOpen = true"
-      >
-        <PhList :size="24" />
-      </button>
+        <a href="#contact" class="button hidden py-2 text-sm lg:inline-flex">Contact Me</a>
+
+        <button
+          class="text-title hover:text-accent lg:hidden"
+          aria-label="Open menu"
+          :aria-expanded="isOpen"
+          aria-controls="nav-menu"
+          @click="isOpen = true"
+        >
+          <PhList :size="24" />
+        </button>
+      </div>
     </AppContainer>
   </header>
 
@@ -62,9 +74,21 @@
 </template>
 
 <script setup>
-import { PhList, PhX, PhHouse, PhUser, PhFileText, PhBriefcase, PhImages, PhChatCircle } from '@phosphor-icons/vue'
+import {
+  PhList,
+  PhX,
+  PhSun,
+  PhMoon,
+  PhHouse,
+  PhUser,
+  PhFileText,
+  PhBriefcase,
+  PhImages,
+  PhChatCircle,
+} from '@phosphor-icons/vue'
 
 const isOpen = ref(false)
+const { toggle: toggleColorMode, isDark } = useColorMode()
 
 const menuLinks = [
   { name: 'Home', url: '#home', icon: PhHouse },
