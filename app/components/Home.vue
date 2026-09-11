@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-10 lg:pt-24">
+  <section class="overflow-x-clip pt-10 lg:pt-24">
     <AppContainer class="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
       <div class="order-2 lg:order-1 lg:col-span-7">
         <h1 class="enter text-4xl font-semibold tracking-tight text-title lg:text-6xl lg:leading-none">
@@ -34,8 +34,20 @@
         </div>
       </div>
 
-      <div class="enter order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end" style="--enter-delay: 120ms">
-        <HomeImg class="w-[220px] text-primary lg:w-[340px]" />
+      <div class="order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
+        <div class="relative isolate">
+          <!-- Ambient glow: brand violet radial, sits behind the portrait, fades in on load -->
+          <div
+            aria-hidden="true"
+            class="
+              enter-glow pointer-events-none absolute left-[64%] top-[34%] -z-10 size-[140%]
+              -translate-x-1/2 -translate-y-1/2 rounded-full
+              bg-radial from-primary/25 via-primary/8 via-45% to-transparent to-70%
+              dark:from-primary/35 dark:via-primary/10
+            "
+          />
+          <HomeImg class="enter w-[220px] text-primary lg:w-[340px]" style="--enter-delay: 120ms" />
+        </div>
       </div>
     </AppContainer>
   </section>

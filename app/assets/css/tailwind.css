@@ -84,6 +84,35 @@
     animation-delay: var(--enter-delay, 0ms);
   }
 
+  .enter-glow {
+    /* bloom in once, then breathe slowly forever */
+    animation:
+      enter-glow 1.4s var(--ease-out-expo) 200ms both,
+      glow-pulse 7s ease-in-out 1.6s infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      opacity: 1;
+      scale: 1;
+    }
+    50% {
+      opacity: 0.75;
+      scale: 1.06;
+    }
+  }
+
+  @keyframes enter-glow {
+    from {
+      opacity: 0;
+      scale: 0.8;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
   @keyframes enter {
     from {
       opacity: 0;
